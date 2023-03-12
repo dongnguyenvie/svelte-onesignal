@@ -1,4 +1,4 @@
-import OneSignal from "svelte-onesignal";
+import OneSignal from "@nolanx/svelte-onesignal";
 
 export default async function runOneSignal() {
   await OneSignal.init({
