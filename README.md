@@ -1,12 +1,13 @@
-<h1 align="center">Welcome to react-onesignal 👋</h1>
+> The package cloned from react-onesignal and modified to work with svelte.
+<h1 align="center">Welcome to svelte-onesignal 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/react-onesignal" target="_blank">
+  <a href="https://www.npmjs.com/package/@nolanx/svelte-onesignal" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/react-onesignal.svg">
   </a>
-  <a href="https://github.com/OneSignal/react-onesignal#readme" target="_blank">
+  <a href="https://github.com/dongnguyenvie/svelte-onesignal#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/OneSignal/react-onesignal/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/dongnguyenvie/svelte-onesignal/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://twitter.com/onesignal" target="_blank">
@@ -16,15 +17,15 @@
 
 > This is a JavaScript module that can be used to easily include [OneSignal](https://onesignal.com/) code in a website or app that uses React for its front-end codebase.
 
-* 🏠 [Homepage](https://github.com/OneSignal/react-onesignal#readme)
-* 🖤 [npm](https://www.npmjs.com/package/react-onesignal)
+* 🏠 [Homepage](https://github.com/dongnguyenvie/svelte-onesignal#readme)
+* 🖤 [npm](https://www.npmjs.com/package/@nolanx/svelte-onesignal)
 
 OneSignal is the world's leader for Mobile Push Notifications, Web Push, and In-App Messaging. It is trusted by 800k businesses to send 5 billion Push Notifications per day.
 
 You can find more information on OneSignal [here](https://onesignal.com/).
 
 ### Migration Guide
-Version 2.0 was recently released. Read the [Migration Guide](https://github.com/OneSignal/react-onesignal/blob/master/MigrationGuide.md) here if you're coming from a version 1 release of the SDK.
+Version 2.0 was recently released. Read the [Migration Guide](https://github.com/dongnguyenvie/svelte-onesignal/blob/master/MigrationGuide.md) here if you're coming from a version 1 release of the SDK.
 
 ## Contents
 - [Install](#install)
@@ -40,13 +41,13 @@ You can use `yarn` or `npm`.
 ### Yarn
 
 ```bash
-yarn add react-onesignal
+yarn add @nolanx/svelte-onesignal
 ```
 
 ### npm
 
 ```bash
-npm install --save react-onesignal
+npm install --save @nolanx/svelte-onesignal
 ```
 
 ---
@@ -55,7 +56,7 @@ npm install --save react-onesignal
 Initialize OneSignal with your `appId` via the `options` parameter:
 
 ```js
-import OneSignal from 'react-onesignal';
+import OneSignal from '@nolanx/svelte-onesignal';
 
 OneSignal.init({ appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' });
 ```
@@ -70,9 +71,9 @@ await OneSignal.init({ appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' });
 ---
 
 ```js
-const [initialized, setInitialized] = useState(false);
+let initialized = false
 OneSignal.init({ appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' }).then(() => {
-  setInitialized(true);
+  initialized = true
   OneSignal.showSlidedownPrompt().then(() => {
     // do other stuff
   });
@@ -183,7 +184,7 @@ This repo includes an `example` React application implementing OneSignal. It was
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/OneSignal/react-onesignal/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/dongnguyenvie/svelte-onesignal/issues).
 
 ## Show your support
 
@@ -202,11 +203,11 @@ Reach out to us via our [Discord server](https://discord.com/invite/EP7gf6Uz7G)!
 ## 📝 License
 
 Copyright © 2022 [OneSignal](https://github.com/OneSignal).<br />
-This project is [Modified MIT](https://github.com/OneSignal/react-onesignal/blob/master/LICENSE) licensed.
+This project is [Modified MIT](https://github.com/dongnguyenvie/svelte-onesignal/blob/master/LICENSE) licensed.
 
 ## Thanks
 Special thanks to [pedro-lb](https://github.com/pedro-lb) and others for work on the project this package is [based on](https://github.com/pedro-lb/react-onesignal).
-<a href="https://github.com/onesignal/react-onesignal/graphs/contributors">
+<a href="https://github.com/dongnguyenvie/svelte-onesignal/graphs/contributors">
   <img src="https://user-images.githubusercontent.com/11739227/119415383-1d354700-bcb7-11eb-946d-01c40cd07010.png" />
 </a>
 
