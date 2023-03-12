@@ -80,6 +80,23 @@ OneSignal.init({ appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' }).then(() => {
 })
 ```
 
+---
+**For sveltekit**
+```js
+import { onMount } from 'svelte';
+
+onMount(async () => {
+  const { default: OneSignal } = await import('@nolanx/svelte-onesignal');
+  OneSignal.init({
+    appId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+  }).then(() => {
+    OneSignal.showSlidedownPrompt().then(() => {
+      // do other stuff
+    });
+  });
+});
+```
+
 ### Init Options
 You can pass other [options](https://documentation.onesignal.com/docs/web-push-sdk#init) to the `init` function. Use these options to configure personalized prompt options, auto-resubscribe, and more.
 
